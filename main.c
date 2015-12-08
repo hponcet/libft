@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/08 12:09:41 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/08 18:06:37 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,16 +164,16 @@ int					main(void)
 	D_ADD_HCTEST(strncpy);
 #define	D_STRCAT
 	D_ADD_TEST(strcat);
-//#define	D_STRNCAT
-//	D_ADD_TEST(strncat);
+#define	D_STRNCAT
+	D_ADD_TEST(strncat);
 //#define	D_STRLCAT
 //	D_ADD_TEST(strlcat);
-//#define	D_STRCHR
-//	D_ADD_TEST(strchr);
-//#define	D_STRRCHR
-//	D_ADD_TEST(strrchr);
-//#define	D_STRSTR
-//	D_ADD_TEST(strstr);
+#define	D_STRCHR
+	D_ADD_TEST(strchr);
+#define	D_STRRCHR
+	D_ADD_TEST(strrchr);
+#define	D_STRSTR
+	D_ADD_TEST(strstr);
 //#define	D_STRNSTR
 //	D_ADD_TEST(strnstr);
 #define	D_STRCMP

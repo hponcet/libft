@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 20:22:03 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/08 15:22:08 by hponcet          ###   ########.fr       */
+/*   Created: 2015/12/08 17:50:22 by hponcet           #+#    #+#             */
+/*   Updated: 2015/12/08 18:10:25 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict dest, const char *restrict src)
+char	*ft_strstr(const char *big, const char *little)
 {
 	size_t		i;
 	size_t		j;
+	char		*ret;
 
+	ret = (char*)big;
+	i = 0;
 	j = 0;
-	i = ft_strlen(dest);
-	while (src[j] != '\0')
+	if (little == NULL)
+		return (ret);
+	while (big[i] != '\0')
 	{
-		dest[i] = src[j];
+		while (little + j + i == big + i + j && little + i + j != '\0' &&
+		big + i + j != '\0')
+			j++;
 		i++;
-		j++;
+		j = 0;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (little[j] == '\0' && big[i] == '\0')
+		return (ret + i);
+	else
+		return (NULL);
 }

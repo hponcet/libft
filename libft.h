@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/08 11:54:12 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/08 18:06:26 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t 
 char    *ft_strdup(const char *s1);
 char    *ft_strcpy(char * dst, const char * src);
 char    *ft_strncpy(char *dst, const char *src, size_t len);
-char    *ft_strcat(char *dest, const char *src);
+char	*ft_strcat(char *restrict dest, const char *restrict src);
 int     ft_strcmp(const char *s1, const char *s2);
 int     ft_isalpha(int c);
 int     ft_isdigit(int c);
@@ -38,16 +38,21 @@ int     ft_tolower(int c);
 void    *ft_memalloc(size_t size);
 void    ft_memdel(void **ap);
 char    *ft_strnew(size_t size);
-void    ft_strdel(char **as);
-void    ft_strclr(char *s);
-void    ft_striter(char *s, void (*f)(char *));
-void    ft_striteri(char *s, void (*f)(unsigned int, char *));
-char    *ft_strmap(char const *s, char (*f)(char));
-size_t  ft_strlen(char const *s);
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int     ft_strequ(char const *s1, char const *s2);
-int     ft_strnequ(char const *s1, char const *s2, size_t n);
-char    *ft_strsub(char const *s, unsigned int start, size_t len);
-char    *ft_strjoin(char const *s1, char const *s2);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+size_t	ft_strlen(char const *s);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strstr(const char *big, const char *little);
 
 #endif
