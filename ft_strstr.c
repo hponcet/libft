@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 17:50:22 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/09 16:24:36 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/09 19:49:39 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,16 @@ char	*ft_strstr(const char *big, const char *little)
 	ret = (char*)big;
 	i = 0;
 	j = 0;
-	if (little == NULL)
+	if (little == NULL || little[i] == '\0')
 		return (ret);
 	while (big[i] != '\0')
 	{
-		while (little[j] == big[i + j])
+		while (little[j] == big[i + j] && big[i + j] != '\0')
 			j++;
-		if (little[j] == '\0' && big[i + j] == '\0')
+		if (little[j] == '\0')
 			return (ret + i);
 		i++;
 		j = 0;
 	}
-	if (little[j] == '\0' && big[i + j] == '\0')
-		return (ret + i);
-	else
-		return (NULL);
+	return (NULL);
 }
