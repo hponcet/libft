@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/08 18:06:37 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/09 19:15:17 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,8 +180,8 @@ int					main(void)
 	D_ADD_TEST(strcmp);
 //#define	D_STRNCMP
 //	D_ADD_TEST(strncmp);
-//#define	D_ATOI
-//	D_ADD_HCTEST(atoi);
+#define	D_ATOI
+	D_ADD_HCTEST(atoi);
 #define	D_ISALPHA
 	D_ADD_HCTEST(isalpha);
 #define	D_ISDIGIT
@@ -1121,13 +1121,17 @@ int				uf_test_isalpha(void)
 #ifdef	D_ATOI
 int				uf_test_atoi(void)
 {
+printf(".");
+
 	size_t		i, j;
 	char		str[12] = {0};
-
+	printf(".");
 	if (atoi("\n\v\t\r\f -123") != ft_atoi("\n\v\t\r\f -123"))
 		D_ERROR
+	printf(".");
 	if (atoi("12-3") != ft_atoi("12-3"))
 		D_ERROR
+	printf(".");
 	if (atoi("-+123") != ft_atoi("-+123"))
 		D_ERROR
 	if (atoi("a123") != ft_atoi("a123"))
