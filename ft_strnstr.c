@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/08 11:42:27 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/11 17:05:59 by hponcet          ###   ########.fr       */
+/*   Created: 2015/12/09 21:09:06 by hponcet           #+#    #+#             */
+/*   Updated: 2015/12/09 21:36:47 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char        *ft_strnew(size_t size)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    char        *str;
-    size_t      i;
+	size_t		i;
+	size_t		j;
+	char		*ret;
 
-    i = 0;
-    str = (char*)malloc(sizeof(char) * (size + 1));
-    while (i != (size + 1))
-    {
-        str[i] = '\0';
-        i++;
-    }
-    return (str);
+	ret = (char*)big;
+	i = 0;
+	j = 0;
+	if (little == NULL || little[i] == '\0')
+		return (ret);
+	while (big[i] != '\0' && i < len)
+	{
+		while (little[j] == big[i + j] && big[i + j] != '\0' && (i + j) < len)
+			j++;
+		if (little[j] == '\0')
+			return (ret + i);
+		i++;
+		j = 0;
+	}
+	return (NULL);
 }
