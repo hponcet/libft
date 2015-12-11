@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 21:07:50 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/11 17:24:13 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/11 17:51:28 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ static unsigned int	ft_count_word(char const *s, char c)
 	}
 	return (count);
 }
-
-
 
 char				**ft_strsplit(char const *s, char c)
 {	

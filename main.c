@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/11 11:57:13 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/11 17:55:12 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,8 +222,8 @@ int					main(void)
 	D_ADD_TEST(strjoin);
 #define	D_STRSPLIT
 	D_ADD_TEST(strsplit);
-//#define	D_ITOA
-//	D_ADD_TEST(itoa);
+#define	D_ITOA
+	D_ADD_TEST(itoa);
 //#define	D_STRTRIM
 //	D_ADD_TEST(strtrim);
 //#define	D_LSTNEW
