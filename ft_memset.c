@@ -6,15 +6,16 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 16:42:14 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/08 11:24:56 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 22:30:11 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char*	s;
-	size_t			i;
+	unsigned char		*s;
+	size_t				i;
 
 	if (b != NULL)
 	{

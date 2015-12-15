@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 21:07:50 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/11 17:51:28 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 23:23:07 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static unsigned int	ft_count_word(char const *s, char c)
 		while (s[i] == c && s[i])
 		{
 			if (s[i + 1] != c && s[i + 1])
-				   count++;
+				count++;
 			i++;
 		}
 		while (s[i] != c && s[i])
@@ -39,7 +39,7 @@ static unsigned int	ft_count_word(char const *s, char c)
 }
 
 char				**ft_strsplit(char const *s, char c)
-{	
+{
 	size_t	i;
 	size_t	j;
 	size_t	len;
@@ -63,6 +63,6 @@ char				**ft_strsplit(char const *s, char c)
 			i++;
 		tab[j] = ft_strsub(s, start, (i - start));
 		j++;
-	}	
+	}
 	return (tab);
 }

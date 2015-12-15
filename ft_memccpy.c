@@ -6,9 +6,10 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:50:19 by hponcet           #+#    #+#             */
-/*   Updated: 2015/11/30 18:27:18 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 22:27:05 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)

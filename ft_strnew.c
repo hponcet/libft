@@ -6,23 +6,23 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:42:27 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/11 17:05:59 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 19:48:24 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char        *ft_strnew(size_t size)
+char		*ft_strnew(size_t size)
 {
-    char        *str;
-    size_t      i;
+	char		*str;
+	size_t	  i;
 
-    i = 0;
-    str = (char*)malloc(sizeof(char) * (size + 1));
-    while (i != (size + 1))
-    {
-        str[i] = '\0';
-        i++;
-    }
-    return (str);
+	i = 0;
+	str = (char*)malloc(sizeof(char) * (size + 1));
+	while (i != (size + 1))
+	{
+		str[i] = '\0';
+		i++;
+	}
+	return (str);
 }

@@ -6,17 +6,17 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:42:39 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/08 11:42:41 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 21:54:28 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void        ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
-    if (as != NULL)
-    {
-        free(*as);
-        *as = NULL;
-    }
+	if (as != NULL)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

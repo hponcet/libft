@@ -6,9 +6,10 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:30 by hponcet           #+#    #+#             */
-/*   Updated: 2015/11/30 16:07:19 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 22:28:26 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)

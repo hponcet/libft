@@ -6,33 +6,33 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:46:29 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/08 15:00:52 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/15 21:50:27 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-    int      i;
-    int      j;
-    char        *buf;
+	int		i;
+	int		j;
+	char	*buf;
 
-    i = -1;
-    j = -1;
-        
-    if (s1 == NULL || s2 == NULL)
-        return (NULL);
-    buf = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
-    if (buf == NULL)
-    {
-        free(buf);
-        return (NULL);
-    }
-    while (s1[++i] != '\0' && s1 != NULL)
-        buf[++j] = s1[i];
-    i = -1;
-    while (s2[++i] != '\0' && s2 != NULL)
-        buf[++j] = s2[i];
-    return (buf);
+	i = -1;
+	j = -1;
+
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	buf = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (buf == NULL)
+	{
+		free(buf);
+		return (NULL);
+	}
+	while (s1[++i] != '\0' && s1 != NULL)
+		buf[++j] = s1[i];
+	i = -1;
+	while (s2[++i] != '\0' && s2 != NULL)
+		buf[++j] = s2[i];
+	return (buf);
 }
