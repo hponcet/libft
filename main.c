@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/11 17:55:12 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/16 22:54:41 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,16 +224,16 @@ int					main(void)
 	D_ADD_TEST(strsplit);
 #define	D_ITOA
 	D_ADD_TEST(itoa);
-//#define	D_STRTRIM
-//	D_ADD_TEST(strtrim);
-//#define	D_LSTNEW
-//	D_ADD_TEST(lstnew);
-//#define	D_LSTDELONE
-//	D_ADD_TEST(lstdelone);
-//#define	D_LSTDEL
-//	D_ADD_TEST(lstdel);
-//#define	D_LSTADD
-//	D_ADD_TEST(lstadd);
+#define	D_STRTRIM
+	D_ADD_TEST(strtrim);
+#define	D_LSTNEW
+	D_ADD_TEST(lstnew);
+#define	D_LSTDELONE
+	D_ADD_TEST(lstdelone);
+#define	D_LSTDEL
+	D_ADD_TEST(lstdel);
+#define	D_LSTADD
+	D_ADD_TEST(lstadd);
 //#define	D_LSTITER
 //	D_ADD_TEST(lstiter);
 //#define D_LSTMAP
@@ -486,7 +486,7 @@ int					uf_test_strtrim(void)
 	r = ft_strtrim(str2);
     if (strcmp(r, "Bonjour") || (str2 == r))
     {
-ft_lstiter.c
+
         printf("Error Line %d, Funct %s : \n\033[31mft_strstrim(\"Bonjour\").\nExpected ret = \"Bonjour\" and differents pointers\
 			   but have ret = \"%s\" and our: %p / your: %p\033[0m\n", __LINE__ - 2, __func__, r, str2, r);
 		free(r);
@@ -740,7 +740,6 @@ int				uf_test_itoa(void)
 			   but have ret = \"%s\"\033[0m\n", __LINE__ - 2, __func__, ret);
 		free(ret);
 		return (0);
-ft_lstiter.c
 	}
 	free(ret);
 	if (strcmp(ret = ft_itoa(123), "123") != 0)

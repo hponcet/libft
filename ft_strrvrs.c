@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strrvrs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/11 17:55:27 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/16 00:13:42 by hponcet          ###   ########.fr       */
+/*   Created: 2015/12/16 17:36:32 by hponcet           #+#    #+#             */
+/*   Updated: 2015/12/16 18:11:35 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_itoa(int n)
-{
-	int				i;
-	unsigned int	x;
-	int				sign;
-	char			*buf;
+#include "libft.h"
 
-	buf = ft_strnew(ft_strlen(n) + 1);
-	sign = (n < 0) ? -n : n;
-	n = (n < 0) ? -n : n; 
-	i = 0;
-	if (n == 0)
-		buf[i++] = '0';
-	while (x > 0)
+char		*ft_strrvrs(char *str)
+{
+	int			i;
+	size_t		j;
+	char		*ret;
+
+	j = 0;
+	i = ft_strlen(str) -1;
+	ret = ft_strnew(i); 
+	
+	while (i > -1)
 	{
-		buf[i++] = x % 10 + '0';
-		x /= 10;
+		ret[j] = str[i];
+		i--;
+		j++;
 	}
-	if (sign < 0)
-		buf[i++] = '-';
-	buf[i] = '\0';
-	ft_strrev(buf);
-	return (buf);
+	return (ret);
 }
