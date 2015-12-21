@@ -6,13 +6,14 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:50:19 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 22:27:05 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 23:46:49 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+void		*ft_memccpy(void *restrict dst, const void *restrict src,
+int c, size_t n)
 {
 	unsigned char	*s;
 	unsigned char	chr;
@@ -26,13 +27,13 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
+		d[i] = s[i];
 		if (chr == s[i])
 		{
 			i++;
 			ret = dst + i;
 			return (ret);
 		}
-		d[i] = s[i];
 		i++;
 	}
 	return (0);

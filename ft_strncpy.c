@@ -6,9 +6,10 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:17:38 by hponcet           #+#    #+#             */
-/*   Updated: 2015/11/30 20:06:19 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 19:16:11 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
@@ -25,7 +26,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 				dst[i] = '\0';
 				i++;
 			}
-
 			return (dst);
 		}
 		dst[i] = src[i];

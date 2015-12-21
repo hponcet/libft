@@ -6,13 +6,13 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:06:08 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 21:57:04 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 19:21:45 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char * dst, const char * src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t		i;
 

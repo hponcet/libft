@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 19:21:02 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 22:31:03 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 19:25:20 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putendl(char const *s)
 {
-	int	retline;
+	int		retline;
 	size_t	i;
 
 	i = 0;

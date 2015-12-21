@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 17:50:22 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/09 19:49:39 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 23:53:52 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strstr(const char *big, const char *little)
 	ret = (char*)big;
 	i = 0;
 	j = 0;
-	if (little == NULL || little[i] == '\0')
+	if (little[i] == '\0')
 		return (ret);
 	while (big[i] != '\0')
 	{

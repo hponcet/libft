@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 21:07:50 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 23:23:07 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/18 00:05:31 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ char				**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	len = ft_count_word(s, c);
-	tab = (char**)malloc(sizeof(char*) * (len + 1));
+	if (!(tab = (char**)malloc(sizeof(char*) * (len + 1))))
+		return (NULL);
 	tab[len] = NULL;
 	while (s[i] && j < len)
 	{
@@ -61,8 +62,7 @@ char				**ft_strsplit(char const *s, char c)
 		start = i;
 		while (s[i] != c && s[i])
 			i++;
-		tab[j] = ft_strsub(s, start, (i - start));
-		j++;
+		tab[j++] = ft_strsub(s, start, (i - start));
 	}
 	return (tab);
 }

@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:45:26 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 21:49:28 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 23:57:14 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	if (s != NULL && f != NULL)
 	{
 		buf = ft_strnew(ft_strlen(s));
+		if (!buf)
+			return (NULL);
 		while (i != ft_strlen(s))
 		{
 			buf[i] = f(s[i]);

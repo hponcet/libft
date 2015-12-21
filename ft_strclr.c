@@ -6,23 +6,23 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:43:01 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/08 11:44:11 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/17 19:22:26 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void        ft_strclr(char *s)
+void		ft_strclr(char *s)
 {
-    size_t      i;
+	size_t		i;
 
-    i = 0;
-    if (s != NULL)
-    {
-        while (s[i] != '\0')
-        {
-            s[i] = '\0';
-            i++;
-        }
-    }
+	i = 0;
+	if (s != NULL)
+	{
+		while (s[i] != '\0')
+		{
+			s[i] = '\0';
+			i++;
+		}
+	}
 }
