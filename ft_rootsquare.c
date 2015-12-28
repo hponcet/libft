@@ -24,4 +24,5 @@ int		ft_rootsquare(int n)
 			return (ft_abs(i));
 		i++;
 	}
+	return (ft_abs(i));
 }
