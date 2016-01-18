@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/22 16:00:12 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/22 20:23:30 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/22 23:19:08 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,4 +24,5 @@ int		ft_rootsquare(int n)
 			return (ft_abs(i));
 		i++;
 	}
+	return (ft_abs(i));
 }

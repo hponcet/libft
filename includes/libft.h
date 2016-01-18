@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/22 20:29:19 by hponcet          ###   ########.fr       */
+/*   Updated: 2015/12/23 00:21:52 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void				ft_putnbr(int n);
 //*************** Fonctions de gestion de Tableaux 2D ****************//
 char				**ft_createtab(int x, int y);
 char				**ft_modiftab(char **tab, int newx, int newy);
+void				ft_freetab(char **tab);
 
 //*************** Structure basique ********************//
 typedef struct		s_list

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cindex.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 18:33:26 by hponcet           #+#    #+#             */
-/*   Updated: 2016/01/18 17:52:59 by hponcet          ###   ########.fr       */
+/*   Created: 2016/01/13 17:59:47 by hponcet           #+#    #+#             */
+/*   Updated: 2016/01/18 20:07:59 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 1
 #include "libft.h"
 
-int		ft_cindex(char *str, char c)
-{
-	int		i;
+int	get_next_line(int const fd, char **line);
+int	ft_afternext(char **afternext, char **line);
 
-	i = 0;
-	while (str[i] != c && str[i] != '\0')
-		i++;
-	if (str[i] != c)
-		return (-1);
-	return (i);
-}
+#endif
