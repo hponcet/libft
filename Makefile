@@ -46,6 +46,7 @@ ft_freetab.c \
 ft_rootsquare.c \
 ft_putnbr.c \
 ft_putnbr_fd.c \
+ft_putnbr_base.c \
 ft_putstr.c \
 ft_putstr_fd.c \
 ft_strcat.c \
