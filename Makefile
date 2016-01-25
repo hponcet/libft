@@ -6,7 +6,7 @@
 #    By: hponcet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/17 19:57:28 by hponcet           #+#    #+#              #
-#    Updated: 2015/12/22 18:29:52 by hponcet          ###   ########.fr        #
+#    Updated: 2016/01/18 20:09:50 by hponcet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ ft_putendl.c \
 ft_putendl_fd.c \
 ft_modiftab.c \
 ft_createtab.c \
+ft_freetab.c \
 ft_rootsquare.c \
 ft_putnbr.c \
 ft_putnbr_fd.c \
@@ -89,7 +90,7 @@ $(NAME): $(OBJECTS)
 	ranlib $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -I ./includes -c $<
 
 clean :
 	rm -rf *.o
@@ -102,8 +103,3 @@ proper : all clean
 	rm -rf ._*
 
 re: fclean all
-
-test : $(SRC)
-	$(CC) $(CFLAGS) -I . $(SRC) ../mains/maindeouf.c
-	./a.out
-	rm -r a.out

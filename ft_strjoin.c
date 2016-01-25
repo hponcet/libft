@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:46:29 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/17 19:21:01 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/01/18 16:45:02 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	buf = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	if (buf == NULL)
-	{
-		free(buf);
 		return (NULL);
-	}
 	while (s1[++i] != '\0' && s1 != NULL)
 		buf[++j] = s1[i];
 	i = -1;

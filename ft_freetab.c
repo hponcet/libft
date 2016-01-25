@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cindex.c                                        :+:      :+:    :+:   */
+/*   ft_freetab.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 18:33:26 by hponcet           #+#    #+#             */
-/*   Updated: 2016/01/18 17:52:59 by hponcet          ###   ########.fr       */
+/*   Created: 2015/12/22 21:58:05 by hponcet           #+#    #+#             */
+/*   Updated: 2015/12/22 23:59:52 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cindex(char *str, char c)
+void		ft_freetab(char **tab)
 {
 	int		i;
 
 	i = 0;
-	while (str[i] != c && str[i] != '\0')
+	while (tab[i] != NULL)
+	{
+		ft_strdel(tab + i);
 		i++;
-	if (str[i] != c)
-		return (-1);
-	return (i);
+	}
+	free(tab);
 }
