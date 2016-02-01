@@ -35,6 +35,7 @@ void		ft_memdel(void **ap);
 ************** Fonctions de gestion de string ***************
 */
 char		*ft_strnew(size_t size);
+char		*ft_strcut(char *str, int len);
 char		*ft_strdup(const char *s1);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
@@ -75,6 +76,7 @@ int			ft_tolower(int c);
 int			ft_cindex(char *str, char c);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);
+void			ft_putnstr(char const *s, int n);
 void			ft_putendl(char const *s);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putstr_fd(char const *s, int fd);

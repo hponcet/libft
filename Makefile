@@ -49,6 +49,7 @@ ft_putnbr.c \
 ft_putnbr_fd.c \
 ft_putnbr_base.c \
 ft_putstr.c \
+ft_putnstr.c \
 ft_putstr_fd.c \
 ft_strcat.c \
 ft_strchr.c \
@@ -63,6 +64,7 @@ ft_striteri.c \
 ft_strjoin.c \
 ft_strlcat.c \
 ft_strlen.c \
+ft_strcut.c \
 ft_strmap.c \
 ft_strmapi.c \
 ft_strncat.c \
