@@ -17,6 +17,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/*
+************** Fonctions de gestion de memoire brut ***************
+*/
 void		*ft_memset(void *b, int c, size_t len);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *restrict dst, const void *restrict src,
@@ -26,24 +29,19 @@ void		*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memccpy(void *restrict dst, const void *restrict src,
 			int c, size_t n);
+void		*ft_memalloc(size_t size);
+void		ft_memdel(void **ap);
+/*
+************** Fonctions de gestion de string ***************
+*/
+char		*ft_strnew(size_t size);
 char		*ft_strdup(const char *s1);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
 char		*ft_strcat(char *restrict dest, const char *restrict src);
 int		ft_strcmp(const char *s1, const char *s2);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-void		*ft_memalloc(size_t size);
-void		ft_memdel(void **ap);
-char		*ft_strnew(size_t size);
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
-int		ft_cindex(char *str, char c);
 char		*ft_strrepchar(char *str, char c, char newc);
 char		*ft_strrvrs(char *str);
 void		ft_striter(char *s, void (*f)(char *));
@@ -69,6 +67,12 @@ char		*ft_strnstr(const char *big, const char *little,
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strtrim(char const *s);
+/*
+************** Fonctions de gestion de characters ***************
+*/
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_cindex(char *str, char c);
 void		ft_putchar(char c);
 void		ft_putstr(char const *s);
 void		ft_putendl(char const *s);
@@ -78,14 +82,20 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putnbr(int n);
 void		ft_putnbr_base(long int n, int base)
-
+/*
+************** Fonctions de detections ***************
+*/
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 /*
 ************** Fonctions de gestion de Tableaux 2D ***************
 */
 char				**ft_createtab(int x, int y);
 char				**ft_modiftab(char **tab, int newx, int newy);
 void				ft_freetab(char **tab);
-
 /*
 ************** Structure basique *******************
 */
@@ -95,7 +105,6 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
-
 /*
 *************** Fonctions pour listes chainees ***************
 */
@@ -106,7 +115,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_lstlen(t_list *list);
-
 /*
 ***************** Fonctions Mathematiques *******************
 */
