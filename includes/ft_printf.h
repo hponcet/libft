@@ -6,12 +6,13 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 01:13:18 by hponcet           #+#    #+#             */
-/*   Updated: 2016/03/31 14:35:04 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/04/03 14:45:01 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# include "ft_colors.h"
 # include <stdarg.h>
 # include <string.h>
 # include <stdlib.h>
