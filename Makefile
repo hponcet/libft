@@ -6,7 +6,7 @@
 #    By: hponcet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/17 19:57:28 by hponcet           #+#    #+#              #
-#*   Updated: 2016/03/31 13:58:25 by hponcet          ###   ########.fr       *#
+#*   Updated: 2016/04/06 13:54:57 by hponcet          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ srcs/ft_strclr.c \
 srcs/ft_strcmp.c \
 srcs/ft_strcpy.c \
 srcs/ft_strdel.c \
+srcs/ft_strdelc.c \
 srcs/ft_strdup.c \
 srcs/ft_strequ.c \
 srcs/ft_striter.c \
@@ -134,3 +135,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+proper: all clean
