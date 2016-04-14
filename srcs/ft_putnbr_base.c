@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 19:23:11 by hponcet           #+#    #+#             */
-/*   Updated: 2016/01/29 17:38:42 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/04/15 00:04:29 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ void	ft_putnbr_base(long int nbr, char *base)
 		ft_putchar(base[r]);
 		i = i / len;
 	}
-
 }

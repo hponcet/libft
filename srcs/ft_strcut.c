@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:42:39 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 21:54:28 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/04/15 00:03:20 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strcut(char *str, int len)
 {
 	char	*nstr;
-	int	i;
+	int		i;
 
 	i = 0;
 	if ((size_t)len >= ft_strlen(str))

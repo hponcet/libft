@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 19:18:04 by hponcet           #+#    #+#             */
-/*   Updated: 2015/12/15 19:20:15 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/04/15 00:09:33 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &(s[i]), 1);
-		i++;
-	}
+	write(fd, s, ft_strlen(s));
 }
