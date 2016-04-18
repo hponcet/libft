@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2016/04/14 23:59:39 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/04/18 19:41:09 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,6 @@ int					ft_isprint(int c);
 /*
 ************** Fonctions de gestion de Tableaux 2D ***************
 */
-char				**ft_createtab(int x, int y);
-char				**ft_modiftab(char **tab, int newx, int newy);
 void				ft_freetab(char **tab);
 /*
 ************** Structure basique *******************
