@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2016/04/18 19:41:09 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/04/18 19:43:14 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,6 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
-/*
-************** Fonctions de gestion de Tableaux 2D ***************
-*/
-void				ft_freetab(char **tab);
 /*
 ************** Structure basique *******************
 */
