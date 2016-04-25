@@ -6,7 +6,11 @@
 #    By: hponcet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/17 19:57:28 by hponcet           #+#    #+#              #
+<<<<<<< HEAD
 #*   Updated: 2016/04/25 23:24:52 by hponcet          ###   ########.fr       *#
+=======
+#*   Updated: 2016/04/18 19:42:55 by hponcet          ###   ########.fr       *#
+>>>>>>> 28e7556f4e13895090df443fbff50567524cd795
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +47,6 @@ srcs/ft_putchar_fd.c \
 srcs/ft_joinf.c \
 srcs/ft_putendl.c \
 srcs/ft_putendl_fd.c \
-srcs/ft_modiftab.c \
-srcs/ft_createtab.c \
-srcs/ft_freetab.c \
 srcs/ft_rootsquare.c \
 srcs/ft_putnbr.c \
 srcs/ft_putnbr_fd.c \
