@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2016/06/03 02:46:34 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/06/03 23:02:12 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void				ft_memdel(void **ap);
 /*
 ************** Fonctions de gestion de string ***************
 */
+char				*ft_strmerge(char *a, char *b);
 char				*ft_strnew(size_t size);
 char				*ft_strcut(char *str, int len);
 char				*ft_strdup(const char *s1);
