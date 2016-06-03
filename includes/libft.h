@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2016/05/18 04:46:26 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/06/03 02:46:34 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ char				*ft_strtrim(char const *s);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_cindex(char *str, char c);
+int					ft_cindex_rev(char *str, char c);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putnstr(char const *s, int n);
