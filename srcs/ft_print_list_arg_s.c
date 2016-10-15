@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/09 03:48:23 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/15 19:13:59 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/15 19:35:37 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void		ft_print_list_arg_s(t_print *list, va_list ap)
 		else
 			ft_print_list_arg_mins(list, buf);
 	}
-	free(buf);
-	free(wbuf);
+	//free(buf);
+	//free(wbuf);
 }
 
 char		*ft_print_list_arg_mins_ht(t_print *list, char *buf)
