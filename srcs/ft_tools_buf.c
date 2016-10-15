@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/10 04:44:06 by hponcet           #+#    #+#             */
-/*   Updated: 2016/03/20 20:41:56 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/15 19:09:07 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ void		ft_str_buf_to_bufret(char *buf)
 {
 	char		*tmp;
 
-	tmp = g_bufret;
+	tmp = ft_strdup(g_bufret);
+	free(g_bufret);
 	g_bufret = ft_strjoin(tmp, buf);
 	if (tmp)
 	{
