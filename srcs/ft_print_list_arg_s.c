@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/09 03:48:23 by hponcet           #+#    #+#             */
-/*   Updated: 2016/03/20 20:50:28 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/15 18:29:46 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void		ft_print_list_arg_mins(t_print *list, char *str)
 		buf[list->len - 1] = 0;
 	}
 	ft_str_buf_to_bufret(buf);
+	free(buf);
 }
 
 void		ft_print_list_arg_majs(t_print *list, wchar_t *wstr)
