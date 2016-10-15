@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/09 05:31:31 by hponcet           #+#    #+#             */
-/*   Updated: 2016/03/20 20:56:55 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/15 19:16:57 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,5 @@ void		ft_arg_s_ret_null(void)
 
 	buf = ft_strdup("(null)");
 	ft_str_buf_to_bufret(buf);
+	free(buf);
 }
