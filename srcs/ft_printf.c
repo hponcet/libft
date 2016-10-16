@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 16:37:57 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/15 18:45:50 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/16 22:03:02 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int			ft_printf(const char *format, ...)
 	ft_print(list, ap);
 	va_end(ap);
 	ft_del_checklist(list);
+	ft_strdel(&g_bufret);
 	return (g_lenret);
 }
