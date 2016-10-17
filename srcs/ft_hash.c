@@ -6,12 +6,38 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/17 19:04:59 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/17 22:42:08 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/18 00:22:26 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hash.h"
 #include <dirent.h>
+
+void	ft_hash_delhtbl(t_hash **htbl, int nb_case)
+{
+	t_hash	**tmp;
+	t_hash	*prev;
+	int		i;
+
+	i = 0;
+	tmp = htbl;
+	while (i < nb_case)
+	{
+		while (tmp[i])
+		{
+			prev = tmp[i];
+			ft_strdel(&tmp[i]->name);
+			ft_strdel(&tmp[i]->value);
+			tmp[i] = tmp[i]->next;
+			free(prev);
+			prev->next = NULL;
+		}
+		i++;
+	}
+	free(htbl);
+	htbl = NULL;
+	tmp = NULL;
+}
 
 t_hash	**ft_hash_addpath(t_hash **htbl, char *path, int nb_case)
 {
