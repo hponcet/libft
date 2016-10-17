@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/17 19:04:59 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/18 00:22:26 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/18 01:03:26 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	ft_hash_delhtbl(t_hash **htbl, int nb_case)
 			ft_strdel(&tmp[i]->name);
 			ft_strdel(&tmp[i]->value);
 			tmp[i] = tmp[i]->next;
-			free(prev);
 			prev->next = NULL;
+			free(prev);
 		}
 		i++;
 	}
@@ -86,21 +86,21 @@ t_hash	**ft_hash_add(t_hash **htbl, char *name, char *value, int nb_case)
 	file = ft_hash_newfile(name, value);
 	tmp = htbl[index];
 	if (tmp)
-		ft_putendl(tmp->name);
-	prev = NULL;
-	if (tmp)
 	{
-		while (tmp && ft_strcmp(tmp->name, file->name) < 0)
+		if (ft_strcmp(tmp->name, file->name) > 0 ||
+				ft_strcmp(tmp->name, file->name) == 0)
 		{
-			prev = tmp;
-			tmp = tmp->next;
+			file->next = tmp;
+			htbl[index] = file;
+			return (htbl);
 		}
-		if (prev)
-			prev->next = file;
+		while (tmp && ft_strcmp(tmp->name, file->name) < 0 && (prev = tmp))
+			tmp = tmp->next;
+		prev->next = file;
 		file->next = tmp;
 	}
 	else
-		tmp = file;
+		htbl[index] = file;
 	return (htbl);
 }
 
