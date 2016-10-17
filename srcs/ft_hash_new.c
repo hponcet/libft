@@ -6,19 +6,19 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/17 21:20:22 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/17 22:15:41 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/17 22:48:01 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hash.h"
 
-char	**ft_hash_newtbl(int nb_case)
+t_hash		**ft_hash_newtbl(int nb_case)
 {
-	char	**htbl;
+	t_hash	**htbl;
 	int		i;
 
 	i = nb_case;
-	if (!(htbl = (char**)malloc(sizeof(t_hash*) * nb_case + 1)))
+	if (!(htbl = (t_hash**)malloc(sizeof(t_hash*) * nb_case + 1)))
 		return (NULL);
 	while (i >= 0)
 		htbl[i--] = NULL;

@@ -6,14 +6,14 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/17 19:04:59 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/17 22:14:48 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/17 22:42:08 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hash.h"
 #include <dirent.h>
 
-char	**ft_hash_addpath(char **htbl, char *path, int nb_case)
+t_hash	**ft_hash_addpath(t_hash **htbl, char *path, int nb_case)
 {
 	DIR				*dirp;
 	struct dirent	*s_dir;
@@ -49,7 +49,7 @@ int		ft_hash(char *name, int nb_case)
 	return (tot % nb_case);
 }
 
-char	**ft_hash_add(char **htbl, char *name, char *value, int nb_case)
+t_hash	**ft_hash_add(t_hash **htbl, char *name, char *value, int nb_case)
 {
 	int		index;
 	t_hash	*file;
@@ -58,7 +58,9 @@ char	**ft_hash_add(char **htbl, char *name, char *value, int nb_case)
 
 	index = ft_hash(name, nb_case);
 	file = ft_hash_newfile(name, value);
-	tmp = (t_hash*)htbl[index];
+	tmp = htbl[index];
+	if (tmp)
+		ft_putendl(tmp->name);
 	prev = NULL;
 	if (tmp)
 	{
@@ -76,7 +78,7 @@ char	**ft_hash_add(char **htbl, char *name, char *value, int nb_case)
 	return (htbl);
 }
 
-char	*ft_hash_search(char **htbl, char *name, int nb_case)
+char	*ft_hash_search(t_hash **htbl, char *name, int nb_case)
 {
 	int		index;
 	char	*ret;
