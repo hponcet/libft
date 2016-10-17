@@ -6,7 +6,7 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/17 21:20:22 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/17 21:21:06 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/17 22:15:41 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	**ft_hash_newtbl(int nb_case)
 	int		i;
 
 	i = nb_case;
-	if (!(htbl = (char**)malloc(sizeof(t_hash*) * nbcase + 1)))
+	if (!(htbl = (char**)malloc(sizeof(t_hash*) * nb_case + 1)))
 		return (NULL);
 	while (i >= 0)
 		htbl[i--] = NULL;

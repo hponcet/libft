@@ -6,11 +6,12 @@
 /*   By: hponcet <hponcet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/17 19:04:59 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/17 21:23:01 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/17 22:14:48 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hash.h"
+#include <dirent.h>
 
 char	**ft_hash_addpath(char **htbl, char *path, int nb_case)
 {
@@ -25,7 +26,7 @@ char	**ft_hash_addpath(char **htbl, char *path, int nb_case)
 		if (ft_strcmp(s_dir->d_name, "..") == 0 || ft_strcmp(s_dir->d_name, ".")
 				== 0)
 			continue ;
-		npath = ft_joinf("%s/%s" path, s_dir->d_name);
+		npath = ft_joinf("%s/%s", path, s_dir->d_name);
 		htbl = ft_hash_add(htbl, s_dir->d_name, npath, nb_case);
 		ft_strdel(&npath);
 	}
@@ -48,7 +49,7 @@ int		ft_hash(char *name, int nb_case)
 	return (tot % nb_case);
 }
 
-char	**ft_hash_add(char **htbl, const char *name, char *value, int nb_case)
+char	**ft_hash_add(char **htbl, char *name, char *value, int nb_case)
 {
 	int		index;
 	t_hash	*file;
@@ -57,7 +58,7 @@ char	**ft_hash_add(char **htbl, const char *name, char *value, int nb_case)
 
 	index = ft_hash(name, nb_case);
 	file = ft_hash_newfile(name, value);
-	tmp = htbl[index];
+	tmp = (t_hash*)htbl[index];
 	prev = NULL;
 	if (tmp)
 	{
@@ -82,11 +83,11 @@ char	*ft_hash_search(char **htbl, char *name, int nb_case)
 	t_hash	*tmp;
 
 	index = ft_hash(name, nb_case);
-	tmp = htbl[index];
+	tmp = (t_hash*)htbl[index];
 	ret = NULL;
 	if (tmp)
 	{
-		while (tmp && ft_strcmp(tmp->name, file->name) < 0)
+		while (tmp && ft_strcmp(tmp->name, name) < 0)
 			tmp = tmp->next;
 		if (ft_strcmp(tmp->name, name) == 0)
 			ret = ft_strdup(tmp->value);
