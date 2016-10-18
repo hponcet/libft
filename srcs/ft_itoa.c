@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 17:55:27 by hponcet           #+#    #+#             */
-/*   Updated: 2016/10/18 20:08:35 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/10/18 20:11:25 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char				*ft_itoa(int n)
 
 	if (n == (-2147483648))
 		return (ft_strdup("-2147483648"));
-	buf = ft_strnew(ft_countnbr(n) + 1);
+	buf = ft_strnew(ft_countnbr(n));
 	if (!buf)
 		return (NULL);
 	sign = n;
