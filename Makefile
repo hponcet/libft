@@ -6,7 +6,7 @@
 #    By: hponcet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/17 19:57:28 by hponcet           #+#    #+#              #
-#*   Updated: 2016/11/07 14:36:28 by hponcet          ###   ########.fr       *#
+#*   Updated: 2016/11/07 17:06:15 by hponcet          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ EXEC =	srcs/ft_atoi.c \
 		srcs/ft_isalpha.c \
 		srcs/ft_isascii.c \
 		srcs/ft_isdigit.c \
+		srcs/ft_isspace.c \
 		srcs/ft_isprint.c \
 		srcs/ft_itoa.c \
 		srcs/ft_tabdel.c \
