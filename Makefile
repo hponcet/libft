@@ -6,7 +6,7 @@
 #    By: hponcet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/17 19:57:28 by hponcet           #+#    #+#              #
-#*   Updated: 2016/11/07 17:06:15 by hponcet          ###   ########.fr       *#
+#*   Updated: 2016/11/07 20:14:05 by hponcet          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ EXEC =	srcs/ft_atoi.c \
 		srcs/ft_strtrim.c \
 		srcs/ft_strrvrs.c \
 		srcs/ft_strrepchar.c \
+		srcs/ft_tabjoin.c \
 		srcs/ft_cindex.c \
 		srcs/ft_cindex_rev.c \
 		srcs/ft_abs.c \

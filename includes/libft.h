@@ -6,7 +6,7 @@
 /*   By: hponcet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:56:31 by hponcet           #+#    #+#             */
-/*   Updated: 2016/11/07 17:07:21 by hponcet          ###   ########.fr       */
+/*   Updated: 2016/11/07 20:14:43 by hponcet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int					ft_printf(const char *format, ...);
 *************** Fonctions de gestion de tableaux ****************
 */
 void				ft_tabdel(char **table);
+char				*ft_tabjoin(char **table);
 /*
 ************** Fonctions de gestion de characters ***************
 */
