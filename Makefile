@@ -6,7 +6,7 @@
 #    By: hponcet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/17 19:57:28 by hponcet           #+#    #+#              #
-#*   Updated: 2016/10/25 23:14:32 by hponcet          ###   ########.fr       *#
+#*   Updated: 2016/11/07 14:36:28 by hponcet          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ EXEC =	srcs/ft_atoi.c \
 		srcs/ft_strrvrs.c \
 		srcs/ft_strsplit.c \
 		srcs/ft_strstr.c \
+		srcs/ft_strinstr.c \
 		srcs/ft_strsub.c \
 		srcs/ft_strtrim.c \
 		srcs/ft_strrvrs.c \
